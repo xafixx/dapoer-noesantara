@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EMenuMain</name>
+    <events>
+        <event-block sid="790682740500508">
+            <conditions>
+                <condition id="17" name="On tap object" sid="433290970491338" type="Touch">
+                    <param id="0" name="Object">game1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="412449187903244" type="game1">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="205675828607117" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="740186184862393" type="System">
+                    <param id="0" name="Layout">Level</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

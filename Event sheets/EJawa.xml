@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EJawa</name>
+    <events>
+        <variable constant="0" name="move" sid="666491986951790" static="0" type="number">1</variable>
+        <event-block sid="809684954195407">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="310109322302314" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="452949709880877" type="karedok">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="291046300811381" type="mieOngklokbutton">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="117459233927245" type="SateMadura">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233229091429629">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="528660114511444" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="796587122120710" type="Sprite">
+                    <param id="0" name="X">lerp(Sprite.X, Sprite2.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="628221873648509">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="910658505603724" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="727581406094838" type="Sprite">
+                    <param id="0" name="X">lerp(Sprite.X, Sprite3.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="290762605651961">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="789763747946282" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="424406301594796" type="Sprite">
+                    <param id="0" name="X">lerp(Sprite.X, Sprite4.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="985055989365653">
+            <conditions>
+                <condition id="3" name="On touched object" sid="499728465837618" type="Touch">
+                    <param id="0" name="Object">panahijo2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="636069547398371" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="856184694082598" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="334777974851422">
+            <conditions>
+                <condition id="3" name="On touched object" sid="220509989668898" type="Touch">
+                    <param id="0" name="Object">panahijo</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="463090981786208" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="168008062250491" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="971046074068130">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="780647996040345" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="802170839910475" type="panahijo2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="871987800510812">
+            <conditions>
+                <condition id="-22" name="Else" sid="547670640729059" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="444810664116210" type="panahijo2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939898097067537">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="250404364956963" type="System">
+                    <param id="0" name="Variable">move</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="974960702720159" type="panahijo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="894818188668610">
+            <conditions>
+                <condition id="-22" name="Else" sid="485990152580771" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="355840559894429" type="panahijo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792610643648253">
+            <conditions>
+                <condition id="17" name="On tap object" sid="649402728771286" type="Touch">
+                    <param id="0" name="Object">kembalibutton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="237782052035947" type="System">
+                    <param id="0" name="Layout">Peta</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="788884759361130">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="224157407446406" type="Touch">
+                    <param id="0" name="Object">kembalibutton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="699011960045529" type="kembalibutton2">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="-16" name="Wait" sid="613838944421229" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Set scale" sid="832290685905545" type="kembalibutton2">
+                    <param id="0" name="Scale">0.3</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Kalimantan</name>
+    <events>
+        <variable constant="0" name="MoveKalimantan" sid="916342500604345" static="0" type="number">1</variable>
+        <event-block sid="976313382937194">
+            <conditions>
+                <condition id="17" name="On tap object" sid="564784317927062" type="Touch">
+                    <param id="0" name="Object">kembalibutton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="258788946021178" type="System">
+                    <param id="0" name="Layout">Peta</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="580238123308787">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="138370694138350" type="Touch">
+                    <param id="0" name="Object">kembalibutton2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="131074524118025" type="kembalibutton2">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="-16" name="Wait" sid="205121420510002" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Set scale" sid="703928466309726" type="kembalibutton2">
+                    <param id="0" name="Scale">0.3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="427144364373275">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="601259451506317" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="480516268982491" type="Kalumpe">
+                    <param id="0" name="Object">garis</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="385222442443076" type="AmparanTatak">
+                    <param id="0" name="Object">garis</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="617865972979308" type="JuhuUmbutSawit">
+                    <param id="0" name="Object">garis</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="656037266377898">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="130135960654620" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="444783595886223" type="garis">
+                    <param id="0" name="X">lerp(garis.X, M1.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="354268558474601">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="313417585424334" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="677122947711186" type="garis">
+                    <param id="0" name="X">lerp(garis.X, M2.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="964203963322355">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="458412955711373" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="735786513291372" type="garis">
+                    <param id="0" name="X">lerp(garis.X, M3.X, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="778267780445869">
+            <conditions>
+                <condition id="3" name="On touched object" sid="317240129065542" type="Touch">
+                    <param id="0" name="Object">panahijo2</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="984977662874006" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="495497123693431" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113476447495596">
+            <conditions>
+                <condition id="3" name="On touched object" sid="342239431874446" type="Touch">
+                    <param id="0" name="Object">panahijo</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="532255598377424" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="461595154392473" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858850711420638">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="482862755278735" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="624658663010865" type="panahijo2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="675980365376104">
+            <conditions>
+                <condition id="-22" name="Else" sid="904312354678362" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="666417190194215" type="panahijo2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="828162609302453">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="576373181816514" type="System">
+                    <param id="0" name="Variable">MoveKalimantan</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="679101868400097" type="panahijo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="394580940974261">
+            <conditions>
+                <condition id="-22" name="Else" sid="449082066289911" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="415079828742797" type="panahijo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

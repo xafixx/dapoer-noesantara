@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TebakRempah</name>
+    <events>
+        <variable constant="0" name="DataDarah" sid="410398630056142" static="0" type="number">3</variable>
+        <variable constant="0" name="Waktu" sid="409259862704698" static="0" type="number">50</variable>
+        <variable constant="0" name="GameMulai" sid="697359437885776" static="0" type="number">1</variable>
+        <event-block sid="633379284612529">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="540521908090607" type="Touch">
+                    <param id="0" name="Object">kembali</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="242122368021491" type="kembali">
+                    <param id="0" name="Scale">0.4</param>
+                </action>
+                <action id="-16" name="Wait" sid="458115708008762" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Set scale" sid="188572832386506" type="kembali">
+                    <param id="0" name="Scale">0.3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="615376982196284">
+            <conditions>
+                <condition id="17" name="On tap object" sid="725489284032166" type="Touch">
+                    <param id="0" name="Object">kembali</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="555769357834463" type="System">
+                    <param id="0" name="Layout">PilihanMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="184424791524177">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="137961961536866" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="437794710543393" type="System">
+                    <param id="0" name="Layer">&quot;NotfBenarSalah&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="955999042337171" type="System">
+                    <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="734903417373586" type="System">
+                    <param id="0" name="Layer">&quot;MenuAkhir&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="183766277459384" type="level123">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="635114212423421">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="203658030266593" type="waktu">
+                    <param id="0" name="Unique ID">124</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="386243632127650" type="waktu">
+                    <param id="0" name="Text">zeropad(int(Waktu/60%60),2)&amp;&quot;:&quot;&amp;zeropad(int(Waktu%60),2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="911382835683149">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="498782865739815" type="System">
+                    <param id="0" name="Variable">DataDarah</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="248639729100296" type="TiledBackground3">
+                    <param id="0" name="Width">lerp(Self.Width,DataDarah*43.838,0.2125)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498398402569540">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="750391863159325" type="System">
+                    <param id="0" name="Variable">DataDarah</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="355009334023148" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="859197862139830">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="177707377088155" type="System">
+                    <param id="0" name="Variable">GameMulai</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="295415927328389">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="850383499811376" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="467719670915182" type="System">
+                            <param id="0" name="Variable">Waktu</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="862810635628921">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="229646833191487" type="Jawaban">
+                            <param id="0" name="Text">&quot;Cengkeh&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="309091727488794" type="Jawaban">
+                            <param id="0" name="Text">&quot;cengkeh&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="406612481416867" type="Jawaban">
+                            <param id="0" name="Text">&quot;CENGKEH&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="359412161385350">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="208016036508045" type="Touch">
+                                    <param id="0" name="Object">buttonKirim</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set visible" sid="692663020313540" type="Jawaban">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="691674563104894" type="betul">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="161220986424701" type="Function">
+                                    <param id="0" name="Name">&quot;AnimationNotif&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="573013528776207" type="System">
+                                    <param id="0" name="Variable">DataDarah</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="165280916007159" type="bingung">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="576499340232183" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="762208726734668" type="Jawaban">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="444623787635169" type="bingung">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="718503136355806">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="166276362186214" type="Jawaban">
+                            <param id="0" name="Text">&quot;Cengkeh&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="596396917117751" type="Jawaban">
+                            <param id="0" name="Text">&quot;cengkeh&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="952936822400606" type="Jawaban">
+                            <param id="0" name="Text">&quot;CENGKEH&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="320176582053020">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="760620755997616" type="Touch">
+                                    <param id="0" name="Object">buttonKirim</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set visible" sid="877805066411709" type="Jawaban">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="255965856494080" type="buttonKirim">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="995206712212525" type="betul">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="192645261191154" type="Function">
+                                    <param id="0" name="Name">&quot;AnimationNotif&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="812550359215208" type="bingung">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="323294791189141" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="371754101748222" type="level123">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="287474814363458" type="NextLevel">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="555614853484944">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="632581270165612" type="level123" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="874694698437447" type="System">
+                                    <param id="0" name="Variable">GameMulai</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="482601556482510">
+            <conditions>
+                <condition id="0" name="On function" sid="722465183327294" type="Function">
+                    <param id="0" name="Name">&quot;AnimationNotif&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="338162086146631" type="System">
+                    <param id="0" name="Layer">&quot;NotfBenarSalah&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="180846281173368" type="System">
+                    <param id="0" name="Variable">GameMulai</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="769945870989117" type="BAWAH">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="465974212932541" type="betul">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="409974929679018" type="BAWAH">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="715552713361620" type="BAWAH">
+                    <param id="0" name="Target is">3</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">75</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="457739123211253" type="betul">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="799341512043693" type="betul">
+                    <param id="0" name="Target is">4</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">447</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="904548020520424" type="betul">
+                    <param id="0" name="Target is">5</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">677</param>
+                </action>
+                <action id="-16" name="Wait" sid="278293413210890" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="516112138835373" type="BAWAH">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="124008819883368" type="BAWAH">
+                    <param id="0" name="Target is">3</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="986092177325335" type="betul">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="299522846373023" type="betul">
+                    <param id="0" name="Target is">4</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action behavior="LiteTween" id="3" name="Set target" sid="312179508449707" type="betul">
+                    <param id="0" name="Target is">5</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="378390889444674" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="428271516831025" type="System">
+                    <param id="0" name="Variable">GameMulai</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="997657777219354" type="System">
+                    <param id="0" name="Layer">&quot;NotfBenarSalah&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="124509454464052">
+            <conditions>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="311516932724343" type="System">
+                    <param id="0" name="Layer">&quot;NotfBenarSalah&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="759979470973896" type="System">
+                    <param id="0" name="Layer">&quot;MenuAkhir&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="499649982584696" type="System">
+                    <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="996533136622047">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="985267261933891" type="Touch">
+                            <param id="0" name="Object">pausepause</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="445217248148408" type="System">
+                            <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="606870047243481" type="System">
+                            <param id="0" name="Variable">GameMulai</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="402706548232027" type="Jawaban">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="847380226496142">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="924831457518994" type="System">
+                    <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="658388948141182">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="346125893633838" type="Touch">
+                            <param id="0" name="Object">mainMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="609276969377542">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="418443966104305" type="mainMenu">
+                                    <param id="0" name="Unique ID">308</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="181980913951887" type="System">
+                                    <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="341109996631650" type="System">
+                                    <param id="0" name="Variable">GameMulai</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="680555644544034" type="Jawaban">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="347014812256899">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="717081845631639" type="mainMenu">
+                                    <param id="0" name="Unique ID">306</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="109989986292772" type="System">
+                                    <param id="0" name="Layer">&quot;MenuPause&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="619234989891853" type="System">
+                                    <param id="0" name="Variable">GameMulai</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="862694948177719">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="721231605986309" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="821502282312042">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="260594912717121" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="482330953951393" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
