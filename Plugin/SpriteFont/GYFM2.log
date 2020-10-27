@@ -1,0 +1,23 @@
+GYFM3.exe Information: 0 : Version: 3.2.0.0
+SyncControlsToFontDetails-IN
+UpdateWindow-IN
+Void InvokeHandler(System.Delegate, System.Object),Void UpdateWindow(),DrawToBitmap(Bahnschrift,Light,72,<~>,~,500,1000,1,1,1,1)
+UpdateWindow-OUT
+SyncControlsToFontDetails-OUT
+SyncFontDetailsToControls-IN
+SyncFontDetailsToControls-OUT
+SyncFontDetailsToControls-IN
+SyncFontDetailsToControls-OUT
+SyncControlsToFontDetails-IN
+SyncControlsToFontDetails-OUT
+UpdateWindow-IN
+Void buttonFont(System.Object, System.Windows.RoutedEventArgs),Void UpdateWindow(),DrawToBitmap(Burbank Big,Condensed Bold,72,<~>,~,500,1000,1,1,1,1)
+UpdateWindow-OUT
+SyncFontDetailsToControls-IN
+SyncFontDetailsToControls-OUT
+SyncControlsToFontDetails-IN
+SyncControlsToFontDetails-OUT
+UpdateWindow-IN
+Void buttonFont(System.Object, System.Windows.RoutedEventArgs),Void UpdateWindow(),DrawToBitmap(Burbank Big,Condensed Bold,72,<~>,~,500,1000,1,1,1,1)
+UpdateWindow-OUT
+Void InvokeHandlersImpl(System.Object, System.Windows.RoutedEventArgs, Boolean),Void OnSaveFile(System.Object, System.Windows.RoutedEventArgs),DrawToBitmap(Burbank Big,Condensed Bold,72,<~>,~,0,0,1,1,1,1)
